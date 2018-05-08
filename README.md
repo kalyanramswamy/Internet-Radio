@@ -70,12 +70,12 @@ verify installation try this in terminal<br />
   edit settings<br/>
   go to ``settings/>main/>server settings`` and add new server.<br/>
   **Add Server** <br/>
-    Name: Test<br/>
-    Type: IceCast<br/>
-    address: 127.0.0.1<br/>
-    port: 8000<br/>
-    password: hackme(default)<br/>
-    IceCast Mountpoint: stream<br/>
-    IceCast User: source<br/>
-   Now start stream by clicking on connect to server button(►)<br/>
+ ```Name: Test Type: IceCast
+    Address: 127.0.0.1<br/>
+    port: 8000
+    password: hackme(default)
+    IceCast Mountpoint: stream
+    IceCast User: source
+ ```
+   Now start stream by clicking on connect to server button(►)<br/>
    this will start live stream at http://localhost:8000/stream
