@@ -67,9 +67,9 @@ verify installation try this in terminal<br />
 #### 2. Icescast2 + B.U.T.T
   start butt from the terminal<br/>
   ``> butt `` <br/>
-  edit settings<br/>
-  go to ``settings/>main/>server settings`` and add new server.<br/>
-  **Add Server** <br/>
+  edit B.U.T.T settings<br/>
+  go to ``settings/ main /server settings`` and add new server.<br/>
+  **Server Config** <br/>
  ```Name: Test Type: IceCast
     Address: 127.0.0.1<br/>
     port: 8000
@@ -77,5 +77,5 @@ verify installation try this in terminal<br />
     IceCast Mountpoint: stream
     IceCast User: source
  ```
-   Now start stream by clicking on connect to server button(►)<br/>
+   close settings and start streaming by clicking on connect to server button(►)<br/>
    this will start live stream at http://localhost:8000/stream
