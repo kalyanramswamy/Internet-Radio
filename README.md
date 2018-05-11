@@ -61,7 +61,7 @@ verify installation try this in terminal<br />
   ```
   Now create ``Playlist.txt`` file with list of mp3 song list.<br/>
   to stream mp3 with ices+icecast<br/>
-  ``> ices -h 127.0.0.1 -p 8000 -m stream -P hackme -F Playlist.txt<br/>``
+  ``> ices -h 127.0.0.1 -p 8000 -m stream -P hackme -F Playlist.txt``<br/>
   Stream link: http://localhost:8000/stream <br/>
   You can open stream url using VLC [tutorial](https://www.wikihow.com/Use-VLC-Media-Player-to-Listen-to-Internet-Radio)<br/>
 #### 2. Icescast2 + B.U.T.T
