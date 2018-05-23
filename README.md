@@ -1,5 +1,7 @@
-Start your own Internet Radio
-### Requirements
+# Internet Radio
+Internet radio is a digital audio service transmitted via the Internet.Broadcasting on the Internet is usually referred to as webcasting since it is not transmitted broadly through wireless means.
+
+### Software Requirements
   1. [Icecast 2](http://icecast.org/)<br />
     Icecast is an free internet radio streaming server <br />
   2. [Ices-0/ Ices-2](http://icecast.org/ices/)<br />
