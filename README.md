@@ -16,12 +16,13 @@ Butt is to stream live audio data from your computer's Mic or Line input to an I
 
 > Note: Icecast and Ices requires either Linux or Windows.
 <br/>
-## Installation Guide(Ubuntu)
+# Installation Guide(Ubuntu)
+
 #### Icecast 2
 installation and configuration guide -<br/>
 https://www.howtoforge.com/linux_webradio_with_icecast2_ices2<br/>
 
-#### Ices 0.4<br/>
+#### Ices 0.4
 Before installing ices make sure your system satisfies these requirements-<br/>
 libmp3lame-dev, libxml2-dev, libshout-dev, libvorbis-dev <br/>
 ```> apt-get install libmp3lame-dev libxml2-dev libshout-dev libvorbis-dev```<br/>
