@@ -15,8 +15,8 @@ Ices2 only support Ogg Vorbis format.<br/>
 Butt is to stream live audio data from your computer's Mic or Line input to an Icecast server([more..](http://icecast.org/docs/icecast-2.4.1/introduction.html))<br/>
 
 > Note: Icecast and Ices requires either Linux or Windows.
-<br/>
-## Installation Guide(Ubuntu)
+
+### Installation Guide(Ubuntu)
 
 #### Icecast 2
 installation and configuration guide -<br/>
