@@ -16,7 +16,7 @@ Butt is to stream live audio data from your computer's Mic or Line input to an I
 
 > Note: Icecast and Ices requires either Linux or Windows.
 <br/>
-# Installation Guide(Ubuntu)
+## Installation Guide(Ubuntu)
 
 #### Icecast 2
 installation and configuration guide -<br/>
