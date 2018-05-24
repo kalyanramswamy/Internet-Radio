@@ -12,16 +12,14 @@ To stream list of songs to Icecast server([more..](http://icecast.org/docs/iceca
 Ices-0.4 support Mp3 format.<br/>
 Ices2 only support Ogg Vorbis format.<br/>
 ### 3. B.U.T.T(Broadcast using this tool)
-Butt is to stream live audio data from your computer's Mic or Line input to an Icecast server([more..](http://icecast.org/docs/icecast-2.4.1/introduction.html))<br/>
+Butt is to stream live audio data from your computer's Mic or Line input to an Icecast server([more..](http://icecast.org/docs/icecast-2.4.1/introduction.html))
 
 > Note: Icecast and Ices requires either Linux or Windows.
 
 ### Installation Guide(Ubuntu)
-
 #### Icecast 2
 installation and configuration guide -<br/>
-https://www.howtoforge.com/linux_webradio_with_icecast2_ices2<br/>
-
+https://www.howtoforge.com/linux_webradio_with_icecast2_ices2
 #### Ices 0.4
 Before installing ices make sure your system satisfies these requirements-<br/>
 libmp3lame-dev, libxml2-dev, libshout-dev, libvorbis-dev <br/>
