@@ -1,83 +1,55 @@
 # Internet Radio
-Internet radio is a digital audio service transmitted via the Internet.Broadcasting on the Internet is usually referred to as webcasting since it is not transmitted broadly through wireless means.
+**Internet radio** (also web radio, net radio, streaming radio, e-radio, IP radio, online radio) is a digital audio service transmitted via the Internet. Broadcasting on the Internet is usually referred to as webcasting since it is not transmitted broadly through wireless means. It can either be used as a stand-alone device running through the Internet, or as a software running through a single computer system([more..](https://en.wikipedia.org/wiki/Internet_radio))<br/>
 
-### Software Requirements
-  1. [Icecast 2](http://icecast.org/)<br />
-    Icecast is an free internet radio streaming server <br />
-  2. [Ices-0/ Ices-2](http://icecast.org/ices/)<br />
-    Ices can stream list-of-songs.<br />
-    we are using Ices0.4 since Ices2 doesn't support mp3.<br/>
-  3. [B.U.T.T(Broadcast using this tool)](https://danielnoethen.de/)<br />
-    B.U.T.T is used to live stream audio data from computer mic.<br />
-    example: podcast, interview e.t.c.<br />
-  
-### Installation Guide
-#### 1. Icecast2 
-  ``> sudo apt-get install icecast2`` <br/>
-  Afterwards we must edit /etc/icecast2/icecast.xml. Most default values should work fine for now, but you should change the     passwords in the <authentication>...</authentication> section.<br />
-  ``> vi /etc/icecast2/icecast.xml`` <br/>
-  Now edit /etc/default/icecast2 to enable icecast2<br />
-  ``> vi /etc/default/icecast2`` <br/>
-  and set ENABLE=true<br />
-  
-  now start icecast server using.<br />
-  ``> /etc/init.d/icecast2 start`` <br/>
-  In case of any problem installing icecast2 follow this [link](https://www.howtoforge.com/linux_webradio_with_icecast2_ices2)<br />
-#### 2. Ices 0.4
- Mp3 streaming is disabled in Ices2 (Ices2 supports only ogg), so you've to manually download, compile & install Ices-0.4.
- Dependencies<br />
- ``> apt-get install libmp3lame-dev libxml2-dev libshout-dev libvorbis-dev`` <br/> 
- 
-    cd /tmp/
-    wget http://downloads.us.xiph.org/releases/ices/ices-0.4.tar.gz
-    tar xf ices-0.4.tar.gz
-    cd ices-0.4/
-    ./configure --prefix=/usr/local --with-pic --with-lame
-    make
-    make install
+In this guide, we are focussing on open source applications so that anyone with minimum Linux knowledge can create Internet Radio free of cost. 
 
-    mkdir /etc/ices
-    cp /usr/local/etc/ices.conf.dist /etc/ices/ices.conf
-verify installation try this in terminal<br />
-``> ices --version`` <br/> 
+## Software Requirement to start Internet Radio
 
-#### 3. B.U.T.T(Broadcast using this tool)
- Download lastest version of BUTT [Download link](https://sourceforge.net/projects/butt/files/butt/)<br />
- 
-    tar -xzf butt-*.tar.gz
-    butt-0.1.16.tar.gz
-    cd butt-0.1.13
-    ./configure
-    make
-    sudo make install
-  verify installation <br />
-  ``> butt`` <br/>
-### How to use Guide <br />
-#### 1. Steam Playlist using Icescast2 + Ices0.4
-  Make sure Icecast2 and Icse 0.4 installed sucessfully and icecast2 server is running in http://127.0.0.1:8000<br />
-  we are using default icecast2 config:<br />
-  ```mountpoint: stream<br/>
-  post: 8000<br/>
-  host: 127.0.0.1<br/>
-  password: hackme
-  ```
-  Now create ``Playlist.txt`` file with list of mp3 song list.<br/>
-  to stream mp3 with ices+icecast<br/>
-  ``> ices -h 127.0.0.1 -p 8000 -m stream -P hackme -F Playlist.txt``<br/>
-  Stream link: http://localhost:8000/stream <br/>
-  You can open stream url using VLC [tutorial](https://www.wikihow.com/Use-VLC-Media-Player-to-Listen-to-Internet-Radio)<br/>
-#### 2. Icescast2 + B.U.T.T
-  start butt from the terminal<br/>
-  ``> butt `` <br/>
-  edit B.U.T.T settings<br/>
-  go to ``settings/ main /server settings`` and add new server.<br/>
-  **Server Config** <br/>
- ```Name: Test Type: IceCast
-    Address: 127.0.0.1<br/>
-    port: 8000
-    password: hackme(default)
-    IceCast Mountpoint: stream
-    IceCast User: source
- ```
-   close settings and start streaming by clicking on connect to server button(►)<br/>
-   this will start live stream at http://localhost:8000/stream
+### 1. Icecast Server
+Icecast is a streaming media server which currently supports Ogg Vorbis and MP3 audio streams. It can be used to create an Internet radio station or a privately running jukebox and many things in between([more..](http://icecast.org/docs/icecast-2.4.1/introduction.html))<br/>
+### 2. Ices 
+To stream list of songs to Icecast server([more..](http://icecast.org/docs/icecast-2.4.1/introduction.html))<br/>
+Ices-0.4 support Mp3 format.<br/>
+Ices2 only support Ogg Vorbis format.<br/>
+### 3. B.U.T.T(Broadcast using this tool)
+Butt is to stream live audio data from your computer's Mic or Line input to an Icecast server([more..](http://icecast.org/docs/icecast-2.4.1/introduction.html))<br/>
+
+> Note: Icecast and Ices requires either Linux or Windows.
+<br/>
+## Installation Guide(Ubuntu)
+#### Icecast 2
+installation and configuration guide -<br/>
+https://www.howtoforge.com/linux_webradio_with_icecast2_ices2<br/>
+
+#### Ices 0.4<br/>
+Before installing ices make sure your system satisfies these requirements-<br/>
+libmp3lame-dev, libxml2-dev, libshout-dev, libvorbis-dev <br/>
+```> apt-get install libmp3lame-dev libxml2-dev libshout-dev libvorbis-dev```<br/>
+
+then download ices-0.4.tar.gz from http://icecast.org/ices/ and make to install<br/>
+```
+cd /tmp/
+wget http://downloads.us.xiph.org/releases/ices/ices-0.4.tar.gz
+tar xf ices-0.4.tar.gz
+cd ices-0.4/
+./configure --prefix=/usr/local --with-pic --with-lame
+make
+make install
+
+mkdir /etc/ices
+cp /usr/local/etc/ices.conf.dist /etc/ices/ices.conf
+```
+to verify installation of Ices from the terminal -<br/>
+```> ices --version ```
+
+#### B.U.T.T(broadcast using this tool)
+download Source Code (tar.gz) from https://danielnoethen.de/ and make to install<br/>
+```
+tar -xzf butt-*.tar.gz
+cd butt-*
+./configure
+make
+sudo make install
+```
+to verify installation of BUTT from the terminal -<br/>
+```> butt ```
