@@ -50,5 +50,5 @@ cd butt-*
 make
 sudo make install
 ```
-to verify installation of BUTT from the terminal -<br/>
+to verify installation of B.U.T.T -<br/>
 ```> butt ```
