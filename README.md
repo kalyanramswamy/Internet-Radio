@@ -41,6 +41,8 @@ cp /usr/local/etc/ices.conf.dist /etc/ices/ices.conf
 to verify installation of Ices from the terminal -<br/>
 ```> ices --version ```
 
+eg. ices -h localhost -p 8000 -P olaradio123 -m /stream -n sia -g sia -d sia-songs -F playerlist.txt
+
 #### B.U.T.T(broadcast using this tool)
 download Source Code (tar.gz) from https://danielnoethen.de/ and make to install<br/>
 ```
